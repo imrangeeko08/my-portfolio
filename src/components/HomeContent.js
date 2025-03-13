@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function HomeContent() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -201,7 +203,11 @@ export default function HomeContent() {
             transition={{ duration: 0.8 }}
             className="p-6 bg-[#14213D]/80 backdrop-blur-md rounded-xl"
           >
-            <p className="text-lg text-gray-300">"Imran’s work is pure magic—fast, beautiful, and flawless!"</p>
+            <p className="text-lg text-gray-300">
+              <FontAwesomeIcon icon={faQuoteLeft} className="mr-2 text-[#00F5D4]" />
+              Imran’s work is pure magic—fast, beautiful, and flawless!
+              <FontAwesomeIcon icon={faQuoteRight} className="ml-2 text-[#00F5D4]" />
+            </p>
             <p className="mt-4 text-[#00F5D4] font-semibold">- John Doe, Designer</p>
           </motion.div>
           <motion.div
@@ -210,7 +216,11 @@ export default function HomeContent() {
             transition={{ duration: 0.8 }}
             className="p-6 bg-[#14213D]/80 backdrop-blur-md rounded-xl"
           >
-            <p className="text-lg text-gray-300">"A true Next.js genius. Delivered beyond expectations!"</p>
+            <p className="text-lg text-gray-300">
+              <FontAwesomeIcon icon={faQuoteLeft} className="mr-2 text-[#00F5D4]" />
+              A true Next.js genius. Delivered beyond expectations!
+              <FontAwesomeIcon icon={faQuoteRight} className="ml-2 text-[#00F5D4]" />
+            </p>
             <p className="mt-4 text-[#00F5D4] font-semibold">- Jane Smith, Client</p>
           </motion.div>
         </div>
